@@ -4,11 +4,20 @@
   "description": "javascript data structures and algorithms",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "tdd": "jest --coverage --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "jest": "^23.6.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/*.{js}",
+      "!**/node_modules/**"
+    ],
+    "coverageDirectory":  "./coverage"
   }
 }
