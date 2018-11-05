@@ -5,7 +5,6 @@
 const isAnagram = (str1, str2) => {
     if (str1.length !== str2.length) return false;
     const lookup = {};
-
     [...str1].forEach((char) => {
         char = char.toLowerCase();
         lookup[char] ? lookup[char]++ : lookup[char] = 1;
@@ -13,8 +12,11 @@ const isAnagram = (str1, str2) => {
 
     [...str2].forEach((char) => {
         char = char.toLowerCase();
-        if (!lookup[char]) return false;
-        lookup[char]--;
+        if (!lookup[char]) {
+            return false;
+        } else {
+            lookup[char]++;
+        }
     });
 
     return true;
