@@ -4,8 +4,8 @@ const incorrectAnagrams = [["Maximiliano","Ayala"], ["Javascript","is fun"], ["J
 
 
 describe('Anagram check', () => {
-    it('should return a function', () =>{
-        expect(typeof anagram === "function");
+    test('should export a function', () =>{
+        expect(typeof anagram).toEqual('function');
     });
 
     it('should return false when strings are not the same length', () => {
