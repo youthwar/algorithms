@@ -20,11 +20,8 @@ describe('Anagram check', () => {
     });
 
     incorrectAnagrams.forEach((testset) => {
-
         const [str1, str2] = testset;
-        it('should returun false for non anagrams ${str1} & ${str2}', () => {
-            console.log(str1, str2);
-            console.log(anagram(str1, str2));
+        it(`should returun false for non anagrams ${str1} & ${str2}`, () => {
             expect(anagram(str1, str2)).toEqual(false);
         });
     });

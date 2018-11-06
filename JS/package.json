@@ -4,7 +4,7 @@
   "description": "javascript data structures and algorithms",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "tdd": "jest --coverage --watch"
   },
   "author": "",
@@ -16,7 +16,8 @@
     "verbose": true,
     "collectCoverageFrom": [
       "**/*.{js}",
-      "!**/node_modules/**"
+      "!**/node_modules/**",
+      "!coverage/**"
     ],
     "coverageDirectory":  "./coverage"
   }
