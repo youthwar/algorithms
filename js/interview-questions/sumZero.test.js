@@ -1,18 +1,18 @@
 const sumZero = require('./sumZero');
-const sampleSet = [-5,-4, -3, -2, 0, 1,2,];
-const failureSet = [-4,-3,-2, 0, 1,5,6];
+const sortedArray = [-3,-2,-1,0,1,2,3,4];
+const noAnswer = [-2,-1,0,3];
 
-
-describe('Sum Zero', () => {
-    it('should export a function', () => {
-        expect(typeof sumZero).toEqual('function');
+describe('Sum Zero function', () => {
+    it('should return a function', () => {
+        expect(typeof sumZero === 'function').toBe(true);
     });
 
-    it('should return the values -2, 2 for the sample set', () => {
-        expect(sumZero(sampleSet)).toEqual([-2,2]);
+    it('should return -3,3 for the sorted array', () => {
+        expect(sumZero(sortedArray)).toEqual([-3,3]);
     });
 
-    it('should return false for the failure set where no sums will equal 0', () => {
-        expect(sumZero(failureSet)).toEqual(false);
+    it('should return false for the array with no pairs', () => {
+        expect(sumZero(noAnswer)).toBe(false);
     });
+
 });
