@@ -14,5 +14,4 @@ describe('Sum Zero function', () => {
     it('should return false for the array with no pairs', () => {
         expect(sumZero(noAnswer)).toBe(false);
     });
-
 });
