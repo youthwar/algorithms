@@ -1,0 +1,24 @@
+{
+    "name": "js",
+    "version": "1.0.0",
+    "description": "javascript data structures and algorithms",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest --coverage",
+      "tdd": "jest --coverage --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "jest": "^23.6.0"
+    },
+    "jest": {
+      "verbose": true,
+      "collectCoverageFrom": [
+        "**/*.{js}",
+        "!**/node_modules/**",
+        "!coverage/**"
+      ],
+      "coverageDirectory":  "./coverage"
+    }
+  }
