@@ -6,6 +6,10 @@ node_js:
 notifications:
   email: false
 
+env:
+  global:
+    - CC_TEST_REPORTER_ID=da3c35c42ab1545f0c4791dd6b741829ca5f4aeeee1b4d4f494e24fc1cbb9059
+
 install:
   - cd ./js && npm install
 
@@ -15,7 +19,7 @@ before_script:
   - ./cc-test-reporter before-build
 
 script:
-  - cd ./js && npm test
+  - npm test
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

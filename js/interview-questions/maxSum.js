@@ -11,6 +11,7 @@ const maxSum = (arr, n) => {
         // calculate the first possible solution
         maxSum += arr[i];
     }
+    
     // start the sliding window
     tempSum = maxSum;
     for (let j = n; j < arr.length; j++) {
